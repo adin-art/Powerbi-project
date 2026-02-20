@@ -90,3 +90,6 @@ CALCULATE(
         Dim_Date[Date] <= MAX(Dim_Date[Date])
     )
 )
+
+
+FACTSALE POWERBI dashboard.png
