@@ -92,4 +92,4 @@ CALCULATE(
 )
 
 
-![Powerbi-project](FACTSALE POWERBI dashboard.png)
+![Powerbi-project](overview.png)
