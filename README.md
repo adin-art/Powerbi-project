@@ -92,4 +92,6 @@ CALCULATE(
 )
 
 
-![Powerbi-project](overview.png)
+## Dashboard Overview
+
+![Dashboard Overview](images/overview.png)
