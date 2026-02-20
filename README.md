@@ -1,74 +1,89 @@
-# 📊 Program Performance Analytics Dashboard
+# 📊 Sales Performance Dashboard | Power BI Project
 
-## 📌 Project Overview
+## 🔎 Project Summary
 
-This repository contains a Power BI dashboard developed to monitor and evaluate program performance across regions and time periods.  
+This project is an interactive **Sales Performance Dashboard** built using Power BI to analyze revenue, profitability, order volume, and regional performance.
 
-The solution applies dimensional modeling principles, DAX-based KPI calculations, and structured ETL processes to generate interactive and decision-support analytics.
-
----
-
-## 🎯 Objectives
-
-- Track achievement against planned targets  
-- Monitor budget utilization and variance  
-- Compare regional performance  
-- Analyze time-based trends  
-- Support evidence-based reporting  
+The goal of this project was to simulate a real-world business scenario where stakeholders need quick access to KPIs and performance insights to support strategic decision-making.
 
 ---
 
-## 🛠 Tools & Technologies
+## 🖼 Dashboard Preview
 
-- Microsoft Power BI Desktop  
-- Power Query (ETL)  
-- DAX (Data Analysis Expressions)  
-- Star Schema Data Modeling  
+![Sales Dashboard Overview](overview.png)
 
----
-
-## 🏗 Data Model
-
-### Fact Table
-**Fact_Performance**
-- Target  
-- Actual  
-- Budget  
-- Expenditure  
-- Beneficiaries  
-- Region_ID  
-- Activity_ID  
-- Date_ID  
-
-### Dimension Tables
-- Dim_Region  
-- Dim_Date  
-- Dim_Activity  
-
-Model structure follows a **Star Schema** with one-to-many relationships from dimensions to the fact table.
+> Make sure `overview.png` is uploaded in the same repository folder as this README file.
 
 ---
 
-## 🔄 Data Transformation (Power Query)
+## 🎯 Business Objectives
 
-Data preparation included:
-
-- Data type standardization  
-- Null value handling  
-- Duplicate removal  
-- Column normalization  
-- Unpivoting structured performance metrics  
-- Creation of derived columns  
+- Track overall company sales and profitability
+- Compare performance across regions and countries
+- Monitor monthly trends and sales targets
+- Identify category-level contribution to revenue
+- Analyze profit margin consistency
 
 ---
 
-## 📐 Key DAX Measures
+## 📌 Key Performance Indicators (KPIs)
+
+| Metric | Value |
+|--------|-------|
+| Total Sales | 70.64M |
+| Total Profit | 25.12M |
+| Total Orders | 100K |
+| Sales Variance | 378.33K |
+| Profit Margin | 36% |
+
+---
+
+## 📊 Dashboard Features
+
+### 1️⃣ Sales by Category
+- Revenue breakdown across product categories
+- Helps identify high-performing product lines
+
+### 2️⃣ Profit vs Quantity Analysis
+- Scatter plot visualization
+- Regional comparison of profitability and volume
+- Detects performance clusters and outliers
+
+### 3️⃣ Regional Sales Distribution
+- Donut chart representation
+- Balanced contribution (~20% per region)
+
+### 4️⃣ Country-Level Quantity Analysis
+- Geographic distribution of order quantities
+- Enables international performance tracking
+
+### 5️⃣ Monthly Trend Analysis
+- Sales trends over time
+- Target vs actual comparison
+- Sales variance monitoring
+- Profit margin stability tracking
+
+---
+
+## 🛠 Technical Skills Demonstrated
+
+- **Power BI Dashboard Design**
+- **Data Modeling**
+- **DAX Measures & Calculations**
+- KPI Development
+- Interactive Filtering (Region slicer)
+- Data Visualization Best Practices
+- Business Insight Extraction
+
+---
+
+## 🧮 Sample DAX Calculations
 
 ```DAX
-Achievement Rate =
-DIVIDE(
-    SUM(Fact_Performance[Actual]),
-    SUM(Fact_Performance[Target])
-)
+Total Sales = SUM(Sales[SalesAmount])
 
+Total Profit = SUM(Sales[Profit])
 
+Profit Margin % = DIVIDE([Total Profit], [Total Sales], 0)
+
+Sales Variance = [Total Sales] - [Sales Target]
