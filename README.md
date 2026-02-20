@@ -92,4 +92,5 @@ CALCULATE(
 )
 
 
-FACTSALE POWERBI dashboard.png
+<img width="1159" height="642" alt="FACTSALE POWERBI dashboard" src="https://github.com/user-attachments/assets/6de14bf8-8b4d-400a-b403-4fd5ea926c38" />
+
